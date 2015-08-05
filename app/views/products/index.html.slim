@@ -1,0 +1,15 @@
+=render "layouts/header"
+.container
+	.row
+		.col-md-8.col-xs-12.col-sm-8
+			.jumbotron
+			  h1 Hello, world!
+			  p This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.
+		.col-md-4.col-xs-12.col-sm-4
+		  .jumbotron
+			  ul
+				- @products.each do |product|
+				  li
+				    = product.name 
+				  li
+				    = product.price
